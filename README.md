@@ -15,7 +15,7 @@ Este projeto é o resultado do conhecimento adquirido no programa Explorer, até
 
 ### Páginas
 
-Projeto Git - [Projeto](https://loreancarlos.github.io/Avaliacao_Mentoria/)
+Projeto Git - [Projeto](https://loreancarlos.github.io/Space_Cream/)
 
 ### O Desafio
 
