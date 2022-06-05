@@ -1,0 +1,279 @@
+* {
+   border: 0;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   font-size: 62.5%;
+
+   --ff-primary: 'Staatliches', sans-serif;
+   --ff-secondary: "Palanquin", sans-serif;
+   --ff-others: 'Roboto', sans-serif;
+   --ff-footer: 'Open Sans', sans-serif;
+}
+
+body {
+   font-size: 1.6rem;
+   font-family: var(--ff-primary);
+
+   margin: auto;
+   background-color: #EFF1FF;
+}
+
+header {
+   text-align: center;
+   background-color: #8E9AAF;
+
+   display: grid;
+   gap: 3.0rem;
+   padding: 3.0rem 0;
+}
+
+header img {
+   margin: 0 auto;
+   height: 13.7rem;
+}
+
+header h1 {
+   background-color: #CBC0D3;
+   font-style: normal;
+   font-weight: 400;
+   font-size: 4.0rem;
+   line-height: 3.4rem;
+   letter-spacing: 0.05em;
+   color: #FFFFFF;
+   text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+   padding: 0.8rem 0;
+}
+
+header p {
+   display: none;
+}
+
+main {
+   text-align: center;
+
+   padding: 1.4rem 3.2rem 6.0rem;
+   max-width: 38.4rem;
+   margin: 0 auto;
+}
+
+main p {
+   font-family: var(--ff-secondary);
+   font-weight: bold;
+   letter-spacing: 0.2px;
+   font-size: 1.4rem;
+   line-height: 1.5rem;
+   color: #23053A;
+}
+
+main section {
+   display: grid;
+   gap: 3.6rem;
+
+   margin-top: 6.3rem;
+}
+
+
+main section img {
+   animation: downTop 700ms 500ms backwards;
+
+   width: 100%;
+}
+
+
+main section span {
+   animation: topDown 700ms 750ms backwards;
+   font-size: 2.0rem;
+   line-height: 3.4rem;
+   background: #FEEAFA;
+   letter-spacing: 0.05em;
+   color: #4A4E69;
+
+   position: absolute;
+   top: 1.6rem;
+   right: 1.6rem;
+   padding: 0 2.4rem;
+   border-radius: 2.0rem;
+}
+
+.image-wrapper {
+   position: relative;
+   transition: transform 200ms;
+
+   border-radius: 2.0rem;
+   margin: auto;
+}
+
+.image-wrapper:hover {
+   transform: scale(1.1);
+}
+
+.image-wrapper:nth-child(5) {
+   display: none;
+}
+
+.image-wrapper:nth-child(6) {
+   display: none;
+}
+
+footer {
+   display: none;
+}
+
+@keyframes downTop {
+   0% {
+      opacity: 0;
+      transform: translateY(+1.5rem);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@keyframes topDown {
+   0% {
+      opacity: 0;
+      transform: translateY(-1.5rem);
+   }
+
+   100% {
+      opacity: 1;
+      transform: translateY(0);
+   }
+}
+
+@media(min-width:768px) {
+   main {
+      max-width: 76.8rem;
+   }
+
+   main section {
+      grid-template-areas: "SHAKES PALETAS"
+         "SHAKES PICOLE"
+         "MASSAS PICOLE";
+   }
+
+   .image-wrapper:nth-child(1) {
+      grid-area: PALETAS;
+   }
+
+   .image-wrapper:nth-child(2) {
+      grid-area: SHAKES;
+   }
+
+   .image-wrapper:nth-child(3) {
+      grid-area: MASSAS;
+   }
+
+   .image-wrapper:nth-child(4) {
+      grid-area: PICOLE;
+   }
+
+   .image-wrapper:nth-child(5) {
+      grid-area: PALETAS2;
+   }
+
+   .image-wrapper:nth-child(6) {
+      grid-area: PICOLE2;
+   }
+}
+
+@media(min-width:1085px) {
+   body {
+      display: flex;
+      max-width: 128.0rem;
+      height: 72.0rem;
+   }
+
+   .image-wrapper img {
+      object-fit: cover;
+      width: 22.0rem;
+      height: 15.0rem;
+      border-radius: 2.0rem;
+   }
+
+   .big img {
+      height: 35.0rem;
+      border-radius: 2.0rem;
+   }
+
+   .image-wrapper:nth-child(5) {
+      display: initial;
+   }
+
+   .image-wrapper:nth-child(6) {
+      display: initial;
+   }
+
+   header {
+      display: flex;
+      flex-direction: column;
+      gap: 3.2rem;
+
+      max-width: 37.7rem;
+   }
+
+   header p {
+      display: block;
+      font-weight: bold;
+      font-size: 1.6rem;
+      line-height: 2.4rem;
+      font-family: var(--ff-others);
+      color: #FFFFFF;
+
+      padding: 0 5.1rem;
+   }
+
+   #page {
+      display: flex;
+      flex-direction: column;
+      gap: 5.0rem;
+
+      padding-top: 5.5rem;
+      width: 100%;
+   }
+
+   main {
+      padding: 0;
+      margin: 0 auto;
+
+      max-width: 100%;
+   }
+
+   main section {
+      grid-template-areas: "PALETAS SHAKES PALETAS2"
+         "PICOLE SHAKES PICOLE2"
+         "PICOLE MASSAS PICOLE2";
+      margin: 0;
+      padding: 0 3.2rem;/* 
+      grid-template-rows: 15.0rem auto 15.0rem; */
+   }
+
+   main p {
+      display: none;
+   }
+
+   footer {
+      display: initial;
+      text-align: center;
+   }
+
+   footer p {
+      font-family: var(--ff-footer);
+      font-size: 14px;
+      line-height: 28px;
+      color: #4A4E69;
+   }
+
+   footer p a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #4A4E69;
+   }
+}
